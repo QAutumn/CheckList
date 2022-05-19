@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41277BF02836836100CA2CE0 /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41277BEF2836836100CA2CE0 /* CheckListItem.swift */; };
+		41726F4C2834D1910046AA53 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41726F4B2834D1910046AA53 /* Constants.swift */; };
+		41726F4E2834D81F0046AA53 /* CheckListsVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41726F4D2834D81F0046AA53 /* CheckListsVC+Delegate.swift */; };
+		41726F502834D8D60046AA53 /* CheckListVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41726F4F2834D8D60046AA53 /* CheckListVC+DataSource.swift */; };
 		41D1A8582834AD7900395964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1A8572834AD7900395964 /* AppDelegate.swift */; };
 		41D1A85A2834AD7900395964 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1A8592834AD7900395964 /* SceneDelegate.swift */; };
-		41D1A85C2834AD7900395964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1A85B2834AD7900395964 /* ViewController.swift */; };
+		41D1A85C2834AD7900395964 /* CheckListsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1A85B2834AD7900395964 /* CheckListsVC.swift */; };
 		41D1A85F2834AD7900395964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D1A85D2834AD7900395964 /* Main.storyboard */; };
 		41D1A8612834AD7B00395964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D1A8602834AD7B00395964 /* Assets.xcassets */; };
 		41D1A8642834AD7B00395964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D1A8622834AD7B00395964 /* LaunchScreen.storyboard */; };
+		64B469DFAD447E1DE9BA7AC5 /* Pods_CheckList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FEC3096301776FF951F763A /* Pods_CheckList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B91A0BD0D10DDD4C028FE58 /* Pods-CheckList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckList.debug.xcconfig"; path = "Target Support Files/Pods-CheckList/Pods-CheckList.debug.xcconfig"; sourceTree = "<group>"; };
+		41277BEF2836836100CA2CE0 /* CheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
+		41726F4B2834D1910046AA53 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		41726F4D2834D81F0046AA53 /* CheckListsVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckListsVC+Delegate.swift"; sourceTree = "<group>"; };
+		41726F4F2834D8D60046AA53 /* CheckListVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckListVC+DataSource.swift"; sourceTree = "<group>"; };
 		41D1A8542834AD7900395964 /* CheckList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D1A8572834AD7900395964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41D1A8592834AD7900395964 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		41D1A85B2834AD7900395964 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		41D1A85B2834AD7900395964 /* CheckListsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsVC.swift; sourceTree = "<group>"; };
 		41D1A85E2834AD7900395964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41D1A8602834AD7B00395964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41D1A8632834AD7B00395964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41D1A8652834AD7B00395964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FEC3096301776FF951F763A /* Pods_CheckList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03592770B29121F156C2B75 /* Pods-CheckList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckList.release.xcconfig"; path = "Target Support Files/Pods-CheckList/Pods-CheckList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B469DFAD447E1DE9BA7AC5 /* Pods_CheckList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41277BF12836836A00CA2CE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41277BEF2836836100CA2CE0 /* CheckListItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		41277BF22836837E00CA2CE0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				41D1A85B2834AD7900395964 /* CheckListsVC.swift */,
+				41726F4F2834D8D60046AA53 /* CheckListVC+DataSource.swift */,
+				41726F4D2834D81F0046AA53 /* CheckListsVC+Delegate.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		41D1A84B2834AD7900395964 = {
 			isa = PBXGroup;
 			children = (
 				41D1A8562834AD7900395964 /* CheckList */,
 				41D1A8552834AD7900395964 /* Products */,
+				F286888E2A74D85AB3C85B44 /* Pods */,
+				B307AD97EFF49E2FA65BF968 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +89,34 @@
 		41D1A8562834AD7900395964 /* CheckList */ = {
 			isa = PBXGroup;
 			children = (
+				41277BF22836837E00CA2CE0 /* ViewController */,
+				41277BF12836836A00CA2CE0 /* Model */,
 				41D1A8572834AD7900395964 /* AppDelegate.swift */,
 				41D1A8592834AD7900395964 /* SceneDelegate.swift */,
-				41D1A85B2834AD7900395964 /* ViewController.swift */,
+				41726F4B2834D1910046AA53 /* Constants.swift */,
 				41D1A85D2834AD7900395964 /* Main.storyboard */,
 				41D1A8602834AD7B00395964 /* Assets.xcassets */,
 				41D1A8622834AD7B00395964 /* LaunchScreen.storyboard */,
 				41D1A8652834AD7B00395964 /* Info.plist */,
 			);
 			path = CheckList;
+			sourceTree = "<group>";
+		};
+		B307AD97EFF49E2FA65BF968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FEC3096301776FF951F763A /* Pods_CheckList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F286888E2A74D85AB3C85B44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B91A0BD0D10DDD4C028FE58 /* Pods-CheckList.debug.xcconfig */,
+				E03592770B29121F156C2B75 /* Pods-CheckList.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41D1A8682834AD7B00395964 /* Build configuration list for PBXNativeTarget "CheckList" */;
 			buildPhases = (
+				D76E5E31FDBC7F9CCC33C6CC /* [CP] Check Pods Manifest.lock */,
 				41D1A8502834AD7900395964 /* Sources */,
 				41D1A8512834AD7900395964 /* Frameworks */,
 				41D1A8522834AD7900395964 /* Resources */,
+				D70889797F21FB8DF47CEBBF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +187,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D70889797F21FB8DF47CEBBF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CheckList/Pods-CheckList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CheckList/Pods-CheckList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CheckList/Pods-CheckList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D76E5E31FDBC7F9CCC33C6CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CheckList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41D1A8502834AD7900395964 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41D1A85C2834AD7900395964 /* ViewController.swift in Sources */,
+				41726F4E2834D81F0046AA53 /* CheckListsVC+Delegate.swift in Sources */,
+				41D1A85C2834AD7900395964 /* CheckListsVC.swift in Sources */,
 				41D1A8582834AD7900395964 /* AppDelegate.swift in Sources */,
 				41D1A85A2834AD7900395964 /* SceneDelegate.swift in Sources */,
+				41726F502834D8D60046AA53 /* CheckListVC+DataSource.swift in Sources */,
+				41726F4C2834D1910046AA53 /* Constants.swift in Sources */,
+				41277BF02836836100CA2CE0 /* CheckListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +382,7 @@
 		};
 		41D1A8692834AD7B00395964 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B91A0BD0D10DDD4C028FE58 /* Pods-CheckList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -293,6 +394,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +412,7 @@
 		};
 		41D1A86A2834AD7B00395964 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E03592770B29121F156C2B75 /* Pods-CheckList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,6 +424,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
