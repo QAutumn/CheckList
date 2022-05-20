@@ -14,6 +14,15 @@ extension CheckListsVC: UITableViewDelegate {
             let accessoryType = cell.accessoryType
             cell.accessoryType = accessoryType == .none ? .checkmark : .none
         }
+        checklistItems[indexPath.row].checked.toggle()
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        checkListsTableView.beginUpdates()
+        checklistItems.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        checkListsTableView.endUpdates()
+    }
+    
 }

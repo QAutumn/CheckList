@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41277BF02836836100CA2CE0 /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41277BEF2836836100CA2CE0 /* CheckListItem.swift */; };
+		414917472837E0EF0064FCF3 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414917462837E0EF0064FCF3 /* AddItemViewController.swift */; };
 		41726F4C2834D1910046AA53 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41726F4B2834D1910046AA53 /* Constants.swift */; };
 		41726F4E2834D81F0046AA53 /* CheckListsVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41726F4D2834D81F0046AA53 /* CheckListsVC+Delegate.swift */; };
 		41726F502834D8D60046AA53 /* CheckListVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41726F4F2834D8D60046AA53 /* CheckListVC+DataSource.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		3B91A0BD0D10DDD4C028FE58 /* Pods-CheckList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckList.debug.xcconfig"; path = "Target Support Files/Pods-CheckList/Pods-CheckList.debug.xcconfig"; sourceTree = "<group>"; };
 		41277BEF2836836100CA2CE0 /* CheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
+		414917462837E0EF0064FCF3 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		41726F4B2834D1910046AA53 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		41726F4D2834D81F0046AA53 /* CheckListsVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckListsVC+Delegate.swift"; sourceTree = "<group>"; };
 		41726F4F2834D8D60046AA53 /* CheckListVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckListVC+DataSource.swift"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				41D1A85B2834AD7900395964 /* CheckListsVC.swift */,
 				41726F4F2834D8D60046AA53 /* CheckListVC+DataSource.swift */,
 				41726F4D2834D81F0046AA53 /* CheckListsVC+Delegate.swift */,
+				414917462837E0EF0064FCF3 /* AddItemViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				41D1A8582834AD7900395964 /* AppDelegate.swift in Sources */,
 				41D1A85A2834AD7900395964 /* SceneDelegate.swift in Sources */,
 				41726F502834D8D60046AA53 /* CheckListVC+DataSource.swift in Sources */,
+				414917472837E0EF0064FCF3 /* AddItemViewController.swift in Sources */,
 				41726F4C2834D1910046AA53 /* Constants.swift in Sources */,
 				41277BF02836836100CA2CE0 /* CheckListItem.swift in Sources */,
 			);
