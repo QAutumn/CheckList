@@ -1,6 +1,6 @@
 //
-//  CheckListsVC+Delegate.swift
-//  CheckList
+//  checkListsVC+Delegate.swift
+//  checkList
 //
 //  Created by 澈水 on 2022/5/18.
 //
@@ -14,15 +14,22 @@ extension CheckListsVC: UITableViewDelegate {
             let accessoryType = cell.accessoryType
             cell.accessoryType = accessoryType == .none ? .checkmark : .none
         }
-        checklistItems[indexPath.row].checked.toggle()
+        checkListItems[indexPath.row].checked.toggle()
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         checkListsTableView.beginUpdates()
-        checklistItems.remove(at: indexPath.row)
+        checkListItems.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
         checkListsTableView.endUpdates()
     }
     
+}
+
+extension CheckListsVC: AddItemDelegate {
+    func addItemComplete(item: String) {
+        checkListItems.append(CheckListItem(name: item))
+        checkListsTableView.reloadData()
+    }
 }
