@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
 //        var nav = UINavigationController()
 //        nav.viewControllers = [TodoVC()]
-        var nav = UINavigationController()
+        let nav = UINavigationController()
         nav.viewControllers = [CheckListsVC()]
         window?.rootViewController = nav
         window?.makeKeyAndVisible()

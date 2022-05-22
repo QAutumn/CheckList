@@ -10,9 +10,9 @@ import SnapKit
 
 class CheckListsVC: UIViewController{
     
-    lazy var checkListsTableView = makecheckListsTableView()
+    lazy var checkListTableView = makecheckListTableView()
     var checkListItems = [CheckListItem]()
-    var addItemVC = AddItemViewController()
+    var addItemVC = ItemDetailViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +23,18 @@ class CheckListsVC: UIViewController{
         checkListItems.append(CheckListItem(name: "Soccer practice"))
         checkListItems.append(CheckListItem(name: "Eat ice cream"))
         
-        navConfig()
-    
-        view.addSubview(checkListsTableView)
-        checkListsTableView.snp.makeConstraints { make in
+        configNavagationBar()
+        addItemVC.delegate = self
+        
+        view.addSubview(checkListTableView)
+        checkListTableView.snp.makeConstraints { make in
             make.size.equalToSuperview()
             make.centerX.equalToSuperview()
             make.top.equalToSuperview()
         }
     }
     
-    func makecheckListsTableView() -> UITableView {
+    func makecheckListTableView() -> UITableView {
         let tableview = UITableView()
         tableview.delegate = self
         tableview.dataSource = self
@@ -41,21 +42,15 @@ class CheckListsVC: UIViewController{
         return tableview
     }
     
-    func navConfig() {
+    func configNavagationBar() {
         //Add titles and buttons to the NavigationBar, and modify the style of the NavigationBar
-        navigationItem.title = "checkLists"
+        navigationItem.title = "Check Lists"
         navigationController?.navigationBar.tintColor = .orange
-
         //This is done to test adding multiple UIBarButtonItems
         navigationItem.setRightBarButton(UIBarButtonItem(systemItem: .add), animated: true)
         let rightBtn = navigationItem.rightBarButtonItem
         rightBtn?.target = self
         rightBtn?.action = #selector(addcheckListBtnClicked)
-    }
-    
-    @objc func addcheckListBtnClicked () {
-        navigationController?.pushViewController(addItemVC, animated: true)
-        addItemVC.delegate = self
     }
 }
 

@@ -23,13 +23,19 @@ extension CheckListsVC: UITableViewDataSource {
     
     func updateText(for cell: UITableViewCell, with item: CheckListItem) {
         //Set the mostleft picture and text of the cell
-        var cfg = UIListContentConfiguration.cell()
-        cfg.image = UIImage(systemName: "sun.min")
-        cfg.text = item.name
-        cell.contentConfiguration = cfg
+        var config = cell.defaultContentConfiguration()
+        if item.checked {
+            config.image = UIImage(systemName: "checkmark.circle.fill")
+        } else {
+            config.image = UIImage(systemName: "checkmark.circle")
+        }
+        config.imageProperties.tintColor = .orange
+        config.text = item.name
+        cell.contentConfiguration = config
+
     }
     
     func updateCheckMark(for cell: UITableViewCell, with item: CheckListItem) {
-        cell.accessoryType = item.checked ? .checkmark : .none
+        cell.accessoryType = .detailDisclosureButton
     }
 }

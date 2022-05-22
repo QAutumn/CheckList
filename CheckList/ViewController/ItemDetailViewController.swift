@@ -8,88 +8,87 @@
 import UIKit
 import SnapKit
 
-protocol AddItemDelegate {
-    func addItemComplete(item: String)
+protocol ItemDetailViewControllerDelegate: AnyObject {
+    func addItemViewControllerDidCancel(_ controller: ItemDetailViewController)
+    func addItemViewController(_ controller: ItemDetailViewController, didfinishAdding item: CheckListItem)
+    func addItemViewController(_ controller: ItemDetailViewController, didfinishEditing item: CheckListItem, newName name: String)
 }
 
-class AddItemViewController: UIViewController {
+class ItemDetailViewController: UIViewController {
     
-    lazy var itemTextField = makeItemTextField()
-    var delegate: AddItemDelegate?
+    lazy var textfield = makeItemTextField()
+    weak var delegate: ItemDetailViewControllerDelegate?
+    var itemToEdit: CheckListItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navConfig()
+        setupUI()
+    }
+    
+    func setupUI() {
         view.backgroundColor = .white
-
-        view.addSubview(itemTextField)
-        itemTextField.snp.makeConstraints { make in
+        view.addSubview(textfield)
+        textfield.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(navigationController?.navigationBar.frame.maxY ?? 0)
         }
-        
-        itemTextField.becomeFirstResponder()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navConfig()
+        textfield.becomeFirstResponder()
+        textfield.text = itemToEdit?.name
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        itemToEdit = nil
     }
     
     func navConfig() {
         //Add titles and buttons to the NavigationBar, and modify the style of the NavigationBar.
-        navigationItem.title = "Add Item"
+        navigationItem.title = itemToEdit == nil ? "Add Item" : "Edit Item"
         navigationController?.navigationBar.tintColor = .orange
         navigationItem.setLeftBarButton(UIBarButtonItem(systemItem: .cancel), animated: true)
         navigationItem.setRightBarButton(UIBarButtonItem(systemItem: .done), animated: true)
         navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.backgroundColor = .white
         //Add binding event.
         let backBtn = navigationItem.leftBarButtonItem
         let doneBtn = navigationItem.rightBarButtonItem
         backBtn?.target = self
         backBtn?.action = #selector(backButtonClicked)
-        
         doneBtn?.target = self
         doneBtn?.action = #selector(doneButtonClicked)
     }
     
     @objc func backButtonClicked() {
-        navigationController?.popViewController(animated: true)
+        delegate?.addItemViewControllerDidCancel(self)
     }
     
     @objc func doneButtonClicked() {
-        delegate?.addItemComplete(item: itemTextField.text!)
-        navigationController?.popViewController(animated: true)
+        if let text = textfield.text, text != ""{
+            if itemToEdit == nil {
+                delegate?.addItemViewController(self, didfinishAdding: CheckListItem(name: text))
+            } else {
+                delegate?.addItemViewController(self, didfinishEditing: itemToEdit!, newName: text)
+            }
+        }
     }
     
     func makeItemTextField() -> UITextField {
         let textField = UITextField()
         textField.delegate = self
         textField.placeholder = "Please enter a to-do list"
-        textField.textColor = .blue
-        textField.font = UIFont.systemFont(ofSize: 30)
+        textField.textColor = .systemPink
+        textField.font = UIFont.systemFont(ofSize: 20)
         textField.clearButtonMode = .whileEditing
-        // Add button to textField
-        textField.leftView = UIImageView(image: UIImage(systemName: "square.and.arrow.up"))
-        textField.leftViewMode = .always
-        textField.rightView = UIImageView(image: UIImage(systemName: "square.and.arrow.up"))
-        textField.rightViewMode = .unlessEditing
         return textField
     }
 }
 
-extension AddItemViewController: UITextFieldDelegate {
-
-    //Called when the textField is displayed
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("did end begin")
-    }
-    
+extension ItemDetailViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
     }
-    
-    /*
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // do something..
-        return true
-    }
-     */
 }
