@@ -51,6 +51,8 @@ class CheckListsVC: UIViewController{
         let rightBtn = navigationItem.rightBarButtonItem
         rightBtn?.target = self
         rightBtn?.action = #selector(addcheckListBtnClicked)
+        
+        // 测试
     }
 }
 
