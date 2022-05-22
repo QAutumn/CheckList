@@ -32,6 +32,9 @@ class CheckListsVC: UIViewController{
             make.centerX.equalToSuperview()
             make.top.equalToSuperview()
         }
+        
+        print("Document folder is \(documentsDirectory())")
+        print("dataFile Path is \(dataFilePath())")
     }
     
     func makecheckListTableView() -> UITableView {
@@ -53,6 +56,15 @@ class CheckListsVC: UIViewController{
         rightBtn?.action = #selector(addcheckListBtnClicked)
         
         // 测试
+    }
+    
+    func documentsDirectory() -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return path[0]
+    }
+    
+    func dataFilePath() -> URL {
+        documentsDirectory().appendingPathComponent("checklists.plist")
     }
 }
 
